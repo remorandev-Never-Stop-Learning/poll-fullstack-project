@@ -9,14 +9,14 @@ import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
-@EntityScan (basePackageClasses = {
+@EntityScan(basePackageClasses = {
         PollServiceApplication.class,
         Jsr310Converters.class
 })
 public class PollServiceApplication {
 
     @PostConstruct
-    void init(){
+    void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
     }
 
