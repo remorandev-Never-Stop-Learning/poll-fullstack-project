@@ -1,4 +1,4 @@
-package es.remorandev.poll.domain;
+package es.remorandev.poll.domain.audit;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;

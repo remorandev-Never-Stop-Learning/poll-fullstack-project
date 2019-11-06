@@ -1,5 +1,6 @@
 package es.remorandev.poll.domain;
 
+import es.remorandev.poll.domain.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -30,7 +31,7 @@ public class User extends DateAudit {
 
     @NotBlank
     @Size(max = 15)
-    private String userName;
+    private String username;
 
     @NaturalId
     @NotBlank
@@ -52,9 +53,9 @@ public class User extends DateAudit {
     public User() {
     }
 
-    public User(@NotBlank @Size(max = 40) String name, @NotBlank @Size(max = 15) String userName, @NotBlank @Size(max = 40) @Email String email, @NotBlank @Size(max = 100) String password, Set<Role> roles) {
+    public User(@NotBlank @Size(max = 40) String name, @NotBlank @Size(max = 15) String username, @NotBlank @Size(max = 40) @Email String email, @NotBlank @Size(max = 100) String password, Set<Role> roles) {
         this.name = name;
-        this.userName = userName;
+        this.username = username;
         this.email = email;
         this.password = password;
         this.roles = roles;
@@ -76,12 +77,12 @@ public class User extends DateAudit {
         this.name = name;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
