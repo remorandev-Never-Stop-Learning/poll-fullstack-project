@@ -1,4 +1,4 @@
-package es.remorandev.poll.domain;
+package es.remorandev.poll.model;
 
 public enum RoleName {
     ROLE_USER,

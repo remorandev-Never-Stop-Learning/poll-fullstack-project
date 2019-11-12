@@ -1,7 +1,7 @@
 package es.remorandev.poll.repository;
 
-import es.remorandev.poll.domain.Role;
-import es.remorandev.poll.domain.RoleName;
+import es.remorandev.poll.model.Role;
+import es.remorandev.poll.model.RoleName;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

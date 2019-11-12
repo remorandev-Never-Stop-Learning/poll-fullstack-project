@@ -1,7 +1,7 @@
 package es.remorandev.poll.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import es.remorandev.poll.domain.User;
+import es.remorandev.poll.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,6 +1,6 @@
-package es.remorandev.poll.domain;
+package es.remorandev.poll.model;
 
-import es.remorandev.poll.domain.audit.DateAudit;
+import es.remorandev.poll.model.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;

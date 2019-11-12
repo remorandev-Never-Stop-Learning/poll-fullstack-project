@@ -1,6 +1,6 @@
 package es.remorandev.poll.security;
 
-import es.remorandev.poll.domain.User;
+import es.remorandev.poll.model.User;
 import es.remorandev.poll.exception.ResourceNotFoundException;
 import es.remorandev.poll.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

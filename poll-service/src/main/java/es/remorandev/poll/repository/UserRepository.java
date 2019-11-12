@@ -1,6 +1,6 @@
 package es.remorandev.poll.repository;
 
-import es.remorandev.poll.domain.User;
+import es.remorandev.poll.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

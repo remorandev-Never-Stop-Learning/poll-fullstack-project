@@ -1,8 +1,8 @@
 package es.remorandev.poll.controller;
 
-import es.remorandev.poll.domain.Role;
-import es.remorandev.poll.domain.RoleName;
-import es.remorandev.poll.domain.User;
+import es.remorandev.poll.model.Role;
+import es.remorandev.poll.model.RoleName;
+import es.remorandev.poll.model.User;
 import es.remorandev.poll.exception.AppException;
 import es.remorandev.poll.payload.ApiResponse;
 import es.remorandev.poll.payload.JwtAuthenticationResponse;
