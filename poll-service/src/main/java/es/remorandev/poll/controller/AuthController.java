@@ -47,11 +47,11 @@ public class AuthController {
     @Autowired
     JwtTokenProvider jwtTokenProvider;
 
-    @PostMapping("/singin")
+    @PostMapping("/signin")
     public ResponseEntity<?> autenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        loginRequest.getUsernameOrPassword(),
+                        loginRequest.getUsernameOrEmail(),
                         loginRequest.getPassword()
                 ));
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -82,7 +82,7 @@ public class AuthController {
         user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
 
         Role userRole = this.roleRepository.findByName(RoleName.ROLE_USER)
-                .orElseThrow(() -> new AppException("User Role not ser"));
+                .orElseThrow(() -> new AppException("User Role not set"));
 
         user.setRoles(Collections.singleton(userRole));
 
