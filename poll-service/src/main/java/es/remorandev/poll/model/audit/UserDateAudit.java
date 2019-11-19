@@ -10,7 +10,6 @@ import javax.persistence.MappedSuperclass;
 @JsonIgnoreProperties(
         value = {"createdBy", "updatedBy"},
         allowGetters = true
-
 )
 public abstract class UserDateAudit  extends  DateAudit {
     @CreatedBy

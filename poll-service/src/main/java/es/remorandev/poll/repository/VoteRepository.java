@@ -18,6 +18,9 @@ public interface VoteRepository extends JpaRepository<Vote, Long> {
     @Query(value = "SELECT NEW es.remorandev.poll.model.ChoiceVoteCount(v.choice.id, count(v.id)) FROM Vote v WHERE v.poll.id = :pollId GROUP BY v.choice.id")
     List<ChoiceVoteCount> countByPollIdGroupByChoiceId(@Param("pollId") Long pollId);
 
+    @Query(value = "SELECT v FROM Vote v where v.user.id = :userId and v.poll.id in :pollIds")
+    List<Vote> findByUserIdAndPollIdIn(@Param("userId") Long userId, @Param("pollIds") List<Long> pollIds);
+
     @Query(value = "SELECT v FROM Vote v WHERE v.user.id = :usereId AND v.poll.id = :pollId")
     Optional<Vote> findByUserIdAndPollId(@Param("userId") Long userId, @Param("pollId") Long pollId);
 
